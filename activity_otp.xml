@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    tools:ignore="HardcodedText,ContentDescription,TouchTargetSizeCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <ImageButton
+            android:id="@+id/btnOtpBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_button"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/back"
+            app:tint="@color/text_primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivOtpIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_badge_green"
+            android:padding="10dp"
+            android:src="@drawable/ic_lock"
+            app:tint="@color/primary"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/btnOtpBack"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvOtpTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verify Mobile Number"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/ivOtpIcon"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvOtpSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="We sent a 6-digit verification code to +91 98765 43210."
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvOtpTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Demo Hint Banner -->
+        <TextView
+            android:id="@+id/tvDemoOtpHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💡 Demo OTP Code: 582914"
+            android:textColor="@color/primary_dark"
+            android:background="@drawable/bg_badge_green"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvOtpSubtitle"/>
+
+        <!-- 6 OTP Input Boxes -->
+        <LinearLayout
+            android:id="@+id/otpBoxesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/tvDemoOtpHint">
+
+            <EditText
+                android:id="@+id/etOtp1"
+                android:layout_width="45dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="5"
+                android:background="@drawable/bg_input_box"/>
+
+            <EditText
+                android:id="@+id/etOtp2"
+                android:layout_width="45dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="8"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_input_box"/>
+
+            <EditText
+                android:id="@+id/etOtp3"
+                android:layout_width="45dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="2"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_input_box"/>
+
+            <EditText
+                android:id="@+id/etOtp4"
+                android:layout_width="45dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="9"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_input_box"/>
+
+            <EditText
+                android:id="@+id/etOtp5"
+                android:layout_width="45dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_input_box"/>
+
+            <EditText
+                android:id="@+id/etOtp6"
+                android:layout_width="45dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="4"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_input_box"/>
+        </LinearLayout>
+
+        <!-- Verify Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerifyOtp"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Verify &amp; Continue Setup"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/primary"
+            app:cornerRadius="14dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintTop_toBottomOf="@id/otpBoxesLayout"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

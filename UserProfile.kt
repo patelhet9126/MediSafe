@@ -1,0 +1,35 @@
+package com.medisafe.app.data.model
+
+data class UserProfile(
+    val id: String,
+    val userId: String,
+    val uniqueProfileId: String,
+    val fullName: String,
+    val preferredName: String = "",
+    val dateOfBirth: String = "",
+    val age: Int = 0,
+    val gender: String = "Male",
+    val bloodGroup: String = "O+",
+    val mobileNumber: String = "",
+    val email: String = "",
+    val address: String = "",
+    val city: String = "",
+    val state: String = "",
+    val country: String = "India",
+    val heightCm: Int = 178,
+    val weightKg: Int = 74,
+    val profilePhotoUrl: String = "",
+    val profileCompletion: Int = 95,
+    val isPrimary: Boolean = true,
+    val ownerType: String = "Myself",
+    val relationship: String = "Self",
+    val organDonorStatus: String = "Registered Donor",
+    val emergencyPin: String = "7492",
+    val qrSecureToken: String = "MEDISAFE_SECURE_TOKEN_O9X84A_HASH",
+    val cardColor: String = "classic-navy", // classic-navy, emerald-teal, slate-dark, clinical-white
+    val showPhoto: Boolean = true,
+    val showBloodGroup: Boolean = true,
+    val showCriticalAllergy: Boolean = true,
+    val showEmergencyContact: Boolean = true,
+    val enableLanyard: Boolean = true
+)

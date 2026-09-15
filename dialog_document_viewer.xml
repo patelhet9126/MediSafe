@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card_rounded"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_badge_green"
+            android:padding="8dp"
+            android:src="@drawable/ic_reports"
+            app:tint="@color/primary"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/tvViewerDocTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Discharge Summary"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvViewerDocMeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verified Clinical Document"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border"
+        android:layout_marginVertical="14dp"/>
+
+    <!-- Document Simulated Preview Box -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvViewerFacility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facility: Sunrise Multispeciality Hospital"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvViewerDoctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Treating Consultant: Dr. Rahul Shah (Interventional Cardiology)"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvViewerDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report Date: 14 March 2024"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvViewerFindings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Key Clinical Findings:\n• Primary PCI with 1 Everolimus-Eluting Stent to LAD\n• Pre-procedure TIMI 0, post-procedure TIMI 3 flow achieved\n• Dual antiplatelet therapy prescribed for 12 months\n• Avoid Beta-Lactam antibiotics (Severe Anaphylaxis documented)"
+            android:textColor="@color/text_primary"
+            android:textSize="12sp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCloseDocViewer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Close Document"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:backgroundTint="@color/primary"
+        app:cornerRadius="12dp"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
